@@ -1,0 +1,138 @@
+/* The positioning currently is simply a mockup of exact values to serve as a reference, at a later
+date the positions will be changed to properly scale with window size. */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+
+    width: 100%;
+}
+
+header p {
+    font-family: Inconsolata, monospace;
+    color: #333;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.08em;
+}
+
+main {
+    margin: 64px 24px 100px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+main img {
+    position: absolute;
+    top: 109px;
+    left: 44px;
+
+    height: 238px;
+    width: 286px;
+    object-fit: contain;
+}
+
+main h1 {
+    position: absolute;
+    top: 407px;
+    left: 24px;
+    margin-right: 1px;
+
+    font-family: 'Space Mono', monospace;
+    color: #333;
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: -0.035em;
+}
+
+main .message {
+    position: absolute;
+    top: 579px;
+    left: 24px;
+
+    font-family: 'Space Mono', monospace;
+    color: #4F4F4F;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.035em;
+    font-weight: 400;
+}
+
+footer {
+    position: absolute;
+    bottom: 24px;
+
+    width: 100%;
+}
+
+footer p {
+    color: #BDBDBD;
+    text-align: center;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+}
+
+.rectangle {
+    position: absolute;
+    top: 726px;
+    left: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 68px;
+    width: 216px;
+
+    background-color: #333;
+}
+
+.rectangle p {
+    color: #FFF;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.035em;
+    font-family: 'Space Mono', monospace;
+}
+
+.emphasis {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 494px) {
+    header {
+        top: 40px;
+        left: 77px;
+    }
+
+    main img {
+        top: 265px;
+        left: 77px;
+
+        width: 539px;
+        height: 447px;
+    }
+
+    main h1 {
+        top: 265px;
+        left: 735px;
+    }
+
+    main .message {
+        top: 491px;
+        left: 735px;
+    }
+
+    .rectangle {
+        top: 663px;
+        left: 740px;
+    }
+}
