@@ -1,15 +1,16 @@
 /* The positioning currently is simply a mockup of exact values to serve as a reference, at a later
 date the positions will be changed to properly scale with window size. */
 
-body {
+* {
     margin: 0;
     padding: 0;
 }
 
 header {
-    position: absolute;
-    top: 20px;
-    left: 24px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 36px;
+    margin-left: 24px;
 
     width: 100%;
 }
@@ -24,15 +25,12 @@ header p {
 
 main {
     margin: 64px 24px 100px;
-
-    display: grid;
-    grid-template-columns: 1fr;
 }
 
 main img {
-    position: absolute;
-    top: 109px;
-    left: 44px;
+    position: relative;
+    margin-top: 36px;
+    margin-bottom: 30px;
 
     height: 238px;
     width: 286px;
@@ -40,10 +38,11 @@ main img {
 }
 
 main h1 {
-    position: absolute;
-    top: 407px;
-    left: 24px;
-    margin-right: 1px;
+    position: relative;
+    margin-top: 36px;
+    margin-bottom: 15px;
+    
+    width: 110%;
 
     font-family: 'Space Mono', monospace;
     color: #333;
@@ -53,9 +52,9 @@ main h1 {
 }
 
 main .message {
-    position: absolute;
-    top: 579px;
-    left: 24px;
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 33px;
 
     font-family: 'Space Mono', monospace;
     color: #4F4F4F;
@@ -67,9 +66,11 @@ main .message {
 
 footer {
     position: absolute;
-    bottom: 24px;
+    bottom: 1%;
 
     width: 100%;
+
+    z-index: -1;
 }
 
 footer p {
@@ -80,9 +81,8 @@ footer p {
 }
 
 .rectangle {
-    position: absolute;
-    top: 726px;
-    left: 24px;
+    position: relative;
+    margin-top: 33px;
 
     display: flex;
     justify-content: center;
@@ -109,30 +109,46 @@ footer p {
 
 @media only screen and (min-width: 494px) {
     header {
-        top: 40px;
-        left: 77px;
+        margin-top: 40px;
+        margin-left: 77px;
+    }
+
+    main {
+        display: grid;
+
+        grid-template-areas: 
+        "a b"
+        "a b"
+        "a c"
+        "a d";
     }
 
     main img {
-        top: 265px;
-        left: 77px;
-
         width: 539px;
         height: 447px;
+
+        grid-area: a;
     }
 
     main h1 {
-        top: 265px;
-        left: 735px;
+        grid-area: b;
+        
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        width: fit-content;
     }
 
     main .message {
-        top: 491px;
-        left: 735px;
+        grid-area: c;
+
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     .rectangle {
-        top: 663px;
-        left: 740px;
+        grid-area: d;
+
+        margin-top: 0px;
     }
 }
