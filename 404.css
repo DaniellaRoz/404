@@ -1,6 +1,3 @@
-/* The positioning currently is simply a mockup of exact values to serve as a reference, at a later
-date the positions will be changed to properly scale with window size. */
-
 * {
     margin: 0;
     padding: 0;
@@ -106,7 +103,6 @@ footer p {
     display: inline;
 
     font-weight: bold;
-    text-decoration: underline;
     color: #BDBDBD;
 }
 
